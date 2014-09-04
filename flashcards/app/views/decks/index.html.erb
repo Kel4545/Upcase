@@ -2,4 +2,7 @@
 
 <% @decks.each do |deck|%>
   <div><%=  link_to deck.name, "/decks/#{deck.id}"  %></div>
+
+  <%= link_to "Edit", "/decks/#{deck.id}/edit" %>
+  <%= link_to "Delete", "/decks/#{deck.id}", method: :delete, confirm: "Are you sure?" %>
 <% end %>
